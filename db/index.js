@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
+// require("dotenv").config({ path: __dirname + "/../.env" });
 
-// const DB = "mongodb://localhost:27017/todo";
+
+console.log(`server port : ${process.env.PORT}`);
+// 連接資料庫
+// const DB = "mongodb://localhost:27017/hotel";
 const DB = process.env.DATABASE.replace("<password>", process.env.DATABASE_PASSWORD);
 
 mongoose

@@ -1,6 +1,6 @@
-const { headers } = require("./httpHeader");
+const headers = require("./httpHeader");
 
-function errorHandle(res, errorCode) {
+function errorHandle(req, res, errorCode) {
 	let message = "";
 	if (errorCode === 404) {
 		res.writeHead(404, headers);

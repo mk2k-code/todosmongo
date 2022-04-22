@@ -6,6 +6,71 @@
 	},
 	"item": [
 		{
+			"name": "查詢所有posts ***",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://polar-reaches-82211.herokuapp.com/posts",
+					"protocol": "http",
+					"host": [
+						"polar-reaches-82211",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢單筆post ***",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://polar-reaches-82211.herokuapp.com/posts/6262058b9c277ba45326c698",
+					"protocol": "http",
+					"host": [
+						"polar-reaches-82211",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6262058b9c277ba45326c698"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "查詢所有代辦",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -52,7 +117,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://polar-reaches-82211.herokuapp.com/todos",
+					"raw": "http://polar-reaches-82211.herokuapp.com/",
 					"protocol": "http",
 					"host": [
 						"polar-reaches-82211",
@@ -60,7 +125,36 @@
 						"com"
 					],
 					"path": [
-						"todos"
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆post ***",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"name\": \"Cornell Broadbear\",\r\n            \"image\": \"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n            \"content\": \"at nibh in hac habitasse platea dum felis sed interdum\",\r\n            \"type\": \"group\",\r\n            \"tags\": [\r\n                \"謎因\",\r\n                \"電影\",\r\n                \"感情\"\r\n            ]\r\n        }\r\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://polar-reaches-82211.herokuapp.com/posts",
+					"protocol": "http",
+					"host": [
+						"polar-reaches-82211",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
 					]
 				}
 			},
@@ -73,7 +167,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"今天要coding.....\"\r\n}\r\n   ",
+					"raw": "{\r\n    \"title\":\"heroku: 今天20:00要上課.....今天20:00要上課\"\r\n}\r\n   ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -154,6 +248,35 @@
 			"response": []
 		},
 		{
+			"name": "刪除所有posts ****",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://polar-reaches-82211.herokuapp.com/posts",
+					"protocol": "http",
+					"host": [
+						"polar-reaches-82211",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "刪除所有代辦",
 			"request": {
 				"method": "DELETE",
@@ -177,6 +300,36 @@
 					],
 					"path": [
 						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆post ***",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://polar-reaches-82211.herokuapp.com/posts/626205299c277ba45326c691",
+					"protocol": "http",
+					"host": [
+						"polar-reaches-82211",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"626205299c277ba45326c691"
 					]
 				}
 			},
@@ -213,6 +366,36 @@
 			"response": []
 		},
 		{
+			"name": "更新單筆post ***",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n        {\r\n            \"name\": \"xxxxxxxxxxxxxxxxxxx\",\r\n            \"image\": \"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n            \"content\": \"xxxxxxxxxxxxxxxxxx\",\r\n            \"type\": \"group\",\r\n            \"likes\": 9999,\r\n            \"comments\": 8888,\r\n            \"tags\": [\r\n                \"謎因\",\r\n                \"電影\",\r\n                \"感情\"\r\n            ]\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://polar-reaches-82211.herokuapp.com/posts/6262058b9c277ba45326c698",
+					"protocol": "http",
+					"host": [
+						"polar-reaches-82211",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6262058b9c277ba45326c698"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "更新單筆代辦",
 			"request": {
 				"method": "PATCH",
@@ -227,7 +410,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://polar-reaches-82211.herokuapp.com/todos/6252f083c2cc0ddcd464109a",
+					"raw": "http://polar-reaches-82211.herokuapp.com/todos/62536a9e81d9b05001d707dd",
 					"protocol": "http",
 					"host": [
 						"polar-reaches-82211",
@@ -236,7 +419,7 @@
 					],
 					"path": [
 						"todos",
-						"6252f083c2cc0ddcd464109a"
+						"62536a9e81d9b05001d707dd"
 					]
 				}
 			},

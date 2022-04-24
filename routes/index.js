@@ -73,7 +73,7 @@ const routes = async (req, res) => {
 			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
-				console.log("-----");
+				// console.log("-----");
 				myApp = {
 					host: myHost,
 					ip: data.ip,
@@ -81,11 +81,9 @@ const routes = async (req, res) => {
 				resWriteData(res, myApp);
 			})
 			.catch((error) => console.log(error, 2));
-
 	} else if ((req.method = "OPTIONS")) {
 		res.writeHead(200, headers);
 		res.end();
-		
 	} else {
 		errorHandle(req, res, 404);
 	}
